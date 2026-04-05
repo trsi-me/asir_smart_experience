@@ -10,8 +10,10 @@
 من جذر مشروع Flutter (`asir_smart_experience/`):
 
 ```bash
-flutter build web --release --dart-define=API_BASE_URL=https://اسم-الخدمة.onrender.com
+flutter build web --release --dart-define=API_BASE_URL=https://اسم-الخدمة.onrender.com --pwa-strategy=none
 ```
+
+- `--pwa-strategy=none` يقلّل مشاكل **service worker** على استضافة بطيئة (مثل الخطة المجانية على Render).
 
 - استبدل `اسم-الخدمة` بالاسم الذي ستختاره في Render (يظهر في الرابط `https://اسم-الخدمة.onrender.com`).
 - **بدون** `/` في نهاية الرابط.
