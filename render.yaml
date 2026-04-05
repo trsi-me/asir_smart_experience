@@ -1,0 +1,12 @@
+# اختياري: لربط المشروع كـ Blueprint على Render (أو انسخ القيم يدوياً من لوحة التحكم)
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: asir-smart-experience
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+    # إذا استمرت مشكلة gunicorn: اجعل startCommand = bash start.sh فقط
+    startCommand: bash start.sh

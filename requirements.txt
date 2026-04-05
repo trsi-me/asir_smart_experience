@@ -1,0 +1,2 @@
+# إذا ضبطت Root Directory على جذر المستودع بدل backend، يثبت هذا كل شيء من backend
+-r backend/requirements.txt
