@@ -1,63 +1,51 @@
-/// صور عسير — روابط من Visit Saudi / Discover Aseer (تعمل مع Flutter Web بدون CORS)
-/// تجنّب روابط مثل files.manuscdn.com لأنها لا ترسل Access-Control-Allow-Origin للمتصفح.
+import 'image_url.dart';
+
+/// روابط الصور الأصلية (ثابتة) + getters تمرّر الويب عبر بروكسي الخادم.
 class AppImages {
-  // Hero - بانوراما عسير (رجال ألمع - موقع تراث عالمي)
-  static const String hero =
+  static const String _hero =
       'https://scth.scene7.com/is/image/scth/rejal-almaa-aseer:crop-1920x1080?defaultImage=rejal-almaa-aseer';
-
-  // جواز عسير - أختام وتراث
-  static const String passport =
+  static const String _passport =
       'https://scth.scene7.com/is/image/scth/rijal-almaa-of-aseer-new:crop-1920x1080?defaultImage=rijal-almaa-of-aseer-new';
-
-  // فعاليات اليوم
-  static const String today =
+  static const String _today =
       'https://scth.scene7.com/is/image/scth/rejal-almaa-aseer:crop-1920x1080?defaultImage=rejal-almaa-aseer';
-
-  // الطقس - السودة والضباب
-  static const String weather =
+  static const String _weather =
       'https://scth.scene7.com/is/image/scth/rijal-almaa-of-aseer-new:crop-1920x1080?defaultImage=rijal-almaa-of-aseer-new';
-
-  // خرائط - طبيعة عسير
-  static const String maps =
+  static const String _maps =
       'https://scth.scene7.com/is/image/scth/rejal-almaa-aseer:crop-1920x1080?defaultImage=rejal-almaa-aseer';
-
-  // التخييم
-  static const String camping =
+  static const String _camping =
       'https://discoveraseer.com/assets/attraction/rijal-almaa.webp';
-
-  // مسارات
-  static const String hiking =
+  static const String _hiking =
       'https://discoveraseer.com/assets/attraction/sok-mhayl-.webp';
-
-  // القهوة الجنوبية - البن العسيري
-  static const String coffee =
+  static const String _coffee =
       'https://asir-coffee.org/wp-content/uploads/2024/07/3031.jpg';
-
-  // تراث - من زمان
-  static const String heritage =
+  static const String _heritage =
       'https://makkahnewspaper.com/uploads/images/2022/08/24/1503473.jpg';
-
-  // من أهلها - منتجات محلية
-  static const String local =
+  static const String _local =
       'https://discoveraseer.com/assets/attraction/rijal-almaa.webp';
-
-  // مواسم
-  static const String seasons =
+  static const String _seasons =
       'https://scth.scene7.com/is/image/scth/rijal-almaa-of-aseer-new:crop-1920x1080?defaultImage=rijal-almaa-of-aseer-new';
-
-  // الخدمات - السكن (رجال ألمع)
-  static const String services =
+  static const String _services =
       'https://discoveraseer.com/assets/attraction/rijal-almaa.webp';
-
-  // التجارب الغذائية - أكل أبها
-  static const String food =
+  static const String _food =
       'https://www.fatakat-a.com/wp-content/uploads/abha-flavours-1.jpg';
-
-  // التسوق والترفيه - سوق المحيل
-  static const String shopping =
+  static const String _shopping =
       'https://discoveraseer.com/assets/attraction/sok-mhayl-.webp';
-
-  // الساحل
-  static const String coastal =
+  static const String _coastal =
       'https://scth.scene7.com/is/image/scth/rejal-almaa-aseer:crop-1920x1080?defaultImage=rejal-almaa-aseer';
+
+  static String get hero => proxiedImageUrl(_hero);
+  static String get passport => proxiedImageUrl(_passport);
+  static String get today => proxiedImageUrl(_today);
+  static String get weather => proxiedImageUrl(_weather);
+  static String get maps => proxiedImageUrl(_maps);
+  static String get camping => proxiedImageUrl(_camping);
+  static String get hiking => proxiedImageUrl(_hiking);
+  static String get coffee => proxiedImageUrl(_coffee);
+  static String get heritage => proxiedImageUrl(_heritage);
+  static String get local => proxiedImageUrl(_local);
+  static String get seasons => proxiedImageUrl(_seasons);
+  static String get services => proxiedImageUrl(_services);
+  static String get food => proxiedImageUrl(_food);
+  static String get shopping => proxiedImageUrl(_shopping);
+  static String get coastal => proxiedImageUrl(_coastal);
 }

@@ -4,10 +4,26 @@ Flask - عسير الذكية: API + خدمة ملفات Flutter Web من مجل
 """
 
 import os
+from urllib.parse import unquote, urlparse
 
-from flask import Flask, jsonify, request, send_from_directory
+import requests
+from flask import Flask, Response, jsonify, request, send_from_directory
 from flask_cors import CORS
 from recommendation_engine import SmartRecommendationEngine
+
+# نطاقات مسموح بجلب الصور منها فقط (أمان — يمنع استخدام الخادم كبروكسي مفتوح)
+_ALLOWED_IMAGE_HOSTS = frozenset({
+    'discoveraseer.com',
+    'www.discoveraseer.com',
+    'asir-coffee.org',
+    'www.asir-coffee.org',
+    'www.fatakat-a.com',
+    'fatakat-a.com',
+    'scth.scene7.com',
+    'makkahnewspaper.com',
+    'www.makkahnewspaper.com',
+    'files.manuscdn.com',
+})
 
 # مجلد ناتج: انسخ محتوى flutter build/web إلى backend/web قبل النشر
 WEB_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'web'))
@@ -46,6 +62,56 @@ def recommend_weather():
     weather = data.get('weather', 'مشمس')
     results = engine.recommend_by_weather(weather)
     return jsonify(results)
+
+
+@app.route('/api/remote-image', methods=['GET'])
+def remote_image():
+    """
+    بروكسي صور للويب: المتصفح يطلب من نفس نطاق التطبيق فيتفادى CORS.
+    Query: u=<url مشفّر>
+    """
+    raw = request.args.get('u', '')
+    if not raw:
+        return jsonify({'error': 'missing u'}), 400
+    try:
+        url = unquote(raw)
+        parsed = urlparse(url)
+    except Exception:
+        return jsonify({'error': 'invalid url'}), 400
+
+    host = (parsed.hostname or '').lower()
+    if host not in _ALLOWED_IMAGE_HOSTS:
+        return jsonify({'error': 'host not allowed'}), 403
+    if parsed.scheme not in ('http', 'https'):
+        return jsonify({'error': 'invalid scheme'}), 400
+
+    try:
+        r = requests.get(
+            url,
+            timeout=20,
+            headers={'User-Agent': 'AsirSmartExperience/1.0 (image-proxy)'},
+            stream=True,
+        )
+        r.raise_for_status()
+        content = r.content
+        ct = r.headers.get('Content-Type', 'image/jpeg')
+        mime = ct.split(';')[0].strip() if ct else 'image/jpeg'
+        if not mime.startswith('image/'):
+            ul = url.lower()
+            if ul.endswith('.webp'):
+                mime = 'image/webp'
+            elif ul.endswith('.png'):
+                mime = 'image/png'
+            elif ul.endswith('.gif'):
+                mime = 'image/gif'
+            else:
+                mime = 'image/jpeg'
+        resp = Response(content, mimetype=mime)
+        resp.headers['Cache-Control'] = 'public, max-age=86400'
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
+    except requests.RequestException as e:
+        return jsonify({'error': str(e)}), 502
 
 
 @app.route('/api/recommend/booking', methods=['POST'])

@@ -31,7 +31,7 @@ import 'package:asir_smart_experience/screens/section_screens/places_guide_scree
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  static const List<Map<String, dynamic>> _sections = [
+  static List<Map<String, dynamic>> get _sections => [
     {'route': 'passport', 'image': AppImages.passport},
     {'route': 'places_guide', 'image': AppImages.heritage},
     {'route': 'today', 'image': AppImages.today},

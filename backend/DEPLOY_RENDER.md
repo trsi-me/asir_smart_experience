@@ -65,4 +65,5 @@ flutter build web --release --dart-define=API_BASE_URL=http://localhost:5000
 ## 6) ملاحظات
 
 - **تحديث الواجهة:** كل ما تغيّر في Flutter، أعد `flutter build web` وانسخ إلى `backend/web` ثم `git push`.
-- **CORS:** الطلبات من نفس النطاق لا تحتاج إعداداً خاصاً؛ `Flask-CORS` يبقى مفيداً إذا استدعيت الـ API من مكان آخر لاحقاً.
+- **صور الويب:** التطبيق يستخدم `/api/remote-image` لجلب الصور من نطاقات مُعرّفة في `app.py` (يتطلب `requests` في `requirements.txt`).
+- **CORS:** الطلبات من نفس النطاق لا تحتاج إعداداً خاصاً للـ API؛ بروكسي الصور يرسل `Access-Control-Allow-Origin` للتطوير المحلي بين بورتات مختلفة.
