@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:asir_smart_experience/core/app_theme.dart';
 import 'package:asir_smart_experience/core/app_images.dart';
+import 'package:asir_smart_experience/core/image_url.dart';
 import 'package:asir_smart_experience/core/app_transitions.dart';
 import 'package:asir_smart_experience/data/places_data.dart';
 import 'package:asir_smart_experience/l10n/app_localizations_ext.dart';
@@ -51,7 +52,7 @@ class CampingScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.network(
-            AppImages.camping,
+            proxiedImageUrl(AppImages.camping),
             fit: BoxFit.cover,
             loadingBuilder: (_, child, p) => p == null ? child : Container(color: AppColors.darkBlue, child: const Center(child: CircularProgressIndicator(color: AppColors.teal))),
             errorBuilder: (_, __, ___) => Container(color: AppColors.surface),

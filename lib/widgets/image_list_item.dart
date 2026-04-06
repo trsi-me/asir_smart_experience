@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:asir_smart_experience/core/app_theme.dart';
+import 'package:asir_smart_experience/core/image_url.dart';
 
 /// عنصر قائمة بصورة - كارد واضح، صورة موحدة باليمين تملأ الارتفاع
 class ImageListItem extends StatelessWidget {
@@ -28,7 +29,7 @@ class ImageListItem extends StatelessWidget {
             width: _imageSize,
             height: _cardHeight,
             child: Image.network(
-              imageUrl!,
+              proxiedImageUrl(imageUrl!),
               fit: BoxFit.cover,
               loadingBuilder: (_, child, p) => p == null ? child : Container(color: AppColors.surface, child: const Center(child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(color: AppColors.teal, strokeWidth: 2)))),
               errorBuilder: (_, __, ___) => Container(color: AppColors.surface, child: Icon(Icons.place, color: AppColors.teal.withValues(alpha: 0.5), size: 36)),

@@ -23,6 +23,11 @@ _ALLOWED_IMAGE_HOSTS = frozenset({
     'makkahnewspaper.com',
     'www.makkahnewspaper.com',
     'files.manuscdn.com',
+    'www.visitsaudi.com',
+    'visitsaudi.com',
+    'static.hiamag.com',
+    'explore.rehlat.ae',
+    'rehlat.ae',
 })
 
 # مجلد ناتج: انسخ محتوى flutter build/web إلى backend/web قبل النشر
@@ -31,6 +36,24 @@ WEB_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'web'))
 app = Flask(__name__)
 CORS(app, origins=['*'])
 engine = SmartRecommendationEngine()
+
+
+def _image_fetch_headers(target_url: str) -> dict:
+    """رؤوس تشبه المتصفح لتقليل حظر جلب الصور من أصول ترفض User-Agent افتراضياً."""
+    parsed = urlparse(target_url)
+    host = (parsed.hostname or '').lower()
+    referer = f'{parsed.scheme}://{host}/'
+    if host in ('discoveraseer.com', 'www.discoveraseer.com'):
+        referer = 'https://discoveraseer.com/'
+    return {
+        'User-Agent': (
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+            '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        ),
+        'Accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+        'Accept-Language': 'ar,en-US;q=0.9,en;q=0.8',
+        'Referer': referer,
+    }
 
 
 @app.route('/api/health', methods=['GET'])
@@ -88,9 +111,9 @@ def remote_image():
     try:
         r = requests.get(
             url,
-            timeout=20,
-            headers={'User-Agent': 'AsirSmartExperience/1.0 (image-proxy)'},
-            stream=True,
+            timeout=30,
+            headers=_image_fetch_headers(url),
+            allow_redirects=True,
         )
         r.raise_for_status()
         content = r.content

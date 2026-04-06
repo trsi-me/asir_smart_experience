@@ -102,7 +102,7 @@
 | المشكلة | السبب | الحل المعتمد |
 |---------|--------|----------------|
 | التطبيق يتعطل على الويب عند الانيميشن | `sqflite` ومسار الملفات لا يعملان في المتصفح | نسخة ويب من قاعدة البيانات في الذاكرة (`database_helper_web.dart`) |
-| صور خارجية لا تظهر على الويب (CORS) | الخوادم الأخرى لا ترسل ترويسة السماح للمتصفح | بروكسي `/api/remote-image` على Flask + `proxiedImageUrl` في Flutter |
+| صور خارجية لا تظهر على الويب (CORS) | الخوادم الأخرى لا ترسل ترويسة السماح للمتصفح | بروكسي `/api/remote-image` على Flask؛ وفي Flutter تُمرَّر **كل** روابط الشبكة عبر `proxiedImageUrl` داخل `ImageTile` و`ImageListItem` وشاشة التفاصيل ورؤوس الأقسام (`proxiedImageUrl(AppImages.…)`) حتى تُحمَّل روابط `files.manuscdn.com` من البيانات دون خطأ |
 | `gunicorn` غير موجود على Render | تثبيت الحزم أو مسار التشغيل | `start.sh` أو `python -m pip install …` ثم gunicorn |
 | Service Worker بطيء أو أخطاء | بيئة استضافة باردة أو مهلة زمنية | `flutter build web --pwa-strategy=none` |
 | مجلد `backend/web` فارغ على السيرفر | لم يُنسخ `build/web` | نسخ ناتج Flutter إلى `backend/web` ورفعه |

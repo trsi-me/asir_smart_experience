@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:asir_smart_experience/core/app_theme.dart';
+import 'package:asir_smart_experience/core/image_url.dart';
 import 'package:asir_smart_experience/data/database_helper.dart';
 import 'package:asir_smart_experience/services/auth_service.dart';
 import 'package:asir_smart_experience/widgets/booking_sheet.dart';
@@ -251,7 +252,7 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                       fit: StackFit.expand,
                       children: [
                         Image.network(
-                          mainImage,
+                          proxiedImageUrl(mainImage),
                           fit: BoxFit.cover,
                           loadingBuilder: (_, child, p) =>
                               p == null ? child : Container(color: AppColors.surface, child: const Center(child: CircularProgressIndicator(color: AppColors.teal))),
@@ -370,7 +371,7 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
           child: SizedBox(
             width: 140,
             child: Image.network(
-              images[i],
+              proxiedImageUrl(images[i]),
               fit: BoxFit.cover,
               errorBuilder: (_, __, ___) => Container(color: AppColors.surface, child: const Icon(Icons.image, color: AppColors.teal)),
             ),

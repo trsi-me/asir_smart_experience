@@ -5,6 +5,7 @@ import 'package:asir_smart_experience/core/app_theme.dart';
 import 'package:asir_smart_experience/l10n/app_localizations_ext.dart';
 import 'package:asir_smart_experience/core/locale_provider.dart';
 import 'package:asir_smart_experience/core/app_images.dart';
+import 'package:asir_smart_experience/core/image_url.dart';
 import 'package:asir_smart_experience/core/app_transitions.dart';
 import 'package:asir_smart_experience/services/auth_service.dart';
 import 'package:asir_smart_experience/widgets/image_tile.dart';
@@ -31,7 +32,7 @@ import 'package:asir_smart_experience/screens/section_screens/places_guide_scree
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  static List<Map<String, dynamic>> get _sections => [
+  static const List<Map<String, dynamic>> _sections = [
     {'route': 'passport', 'image': AppImages.passport},
     {'route': 'places_guide', 'image': AppImages.heritage},
     {'route': 'today', 'image': AppImages.today},
@@ -233,7 +234,7 @@ class HomeScreen extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.network(
-              AppImages.hero,
+              proxiedImageUrl(AppImages.hero),
               fit: BoxFit.cover,
               loadingBuilder: (_, child, progress) {
                 if (progress == null) return child;

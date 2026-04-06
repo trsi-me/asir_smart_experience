@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:asir_smart_experience/core/app_theme.dart';
+import 'package:asir_smart_experience/core/image_url.dart';
 
 /// بلاطة صورة بخلفية كاملة - بدون كارد أو خط جانبي
 class ImageTile extends StatelessWidget {
@@ -45,7 +46,7 @@ class ImageTile extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Image.network(
-                imageUrl,
+                proxiedImageUrl(imageUrl),
                 fit: BoxFit.cover,
                 loadingBuilder: (_, child, progress) {
                   if (progress == null) return child;
