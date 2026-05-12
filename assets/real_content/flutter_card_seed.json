@@ -1,0 +1,599 @@
+[
+  {
+    "id": "rest_bab_al_turath",
+    "title": "مطعم باب التراث",
+    "subtitle": "أبها",
+    "category": "restaurants",
+    "image": "assets/restaurants/bab_al_turath_1.jpg",
+    "description": "مطعم بطابع تراثي يعرض تجربة أكل محلية مرتبطة بالهوية العسيرية ومناسب للزوار الباحثين عن أجواء شعبية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bab+Al+Turath+Restaurant+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "مطعم",
+      "تراث",
+      "مأكولات محلية",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "rest_ala_bali",
+    "title": "مطعم على بالي",
+    "subtitle": "أبها",
+    "category": "restaurants",
+    "image": "assets/restaurants/ala_bali_1.jpg",
+    "description": "وجهة طعام واردة ضمن توصيات Visit Saudi في عسير، مناسبة لإضافة خيارات مطاعم حديثة داخل التطبيق.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ala+Bali+Restaurant+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "مطعم",
+      "جلسات",
+      "أبها",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "rest_zurna",
+    "title": "زورنا",
+    "subtitle": "أبها",
+    "category": "restaurants",
+    "image": "assets/restaurants/zurna_1.jpg",
+    "description": "مطعم مذكور ضمن قائمة أفضل الأشياء في عسير على Visit Saudi، مناسب لقسم المطاعم والوجهات الغذائية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Zurna+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "مطعم",
+      "أبها",
+      "Food",
+      "Friends"
+    ]
+  },
+  {
+    "id": "rest_sadaf",
+    "title": "مطعم صدف",
+    "subtitle": "أبها",
+    "category": "restaurants",
+    "image": "assets/restaurants/sadaf_1.jpg",
+    "description": "مطعم وارد في Visit Saudi ضمن فئة الأطعمة والمشروبات في عسير ويمكن عرضه كوجهة طعام موثوقة.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sadaf+Restaurant+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "مطعم",
+      "أبها",
+      "عائلات",
+      "أصدقاء"
+    ]
+  },
+  {
+    "id": "rest_shandal",
+    "title": "شندل",
+    "subtitle": "أبها",
+    "category": "restaurants",
+    "image": "assets/restaurants/ala_bali_1.jpg",
+    "description": "مطعم موصوف في Visit Saudi ضمن فئة المطبخ السعودي، مناسب لإبراز المأكولات المحلية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Shandal+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "مطبخ سعودي",
+      "مطعم",
+      "أكلات محلية"
+    ]
+  },
+  {
+    "id": "cafe_fog",
+    "title": "فوق كوفي",
+    "subtitle": "أبها",
+    "category": "cafes",
+    "image": "assets/cafes/fog_coffee_1.jpg",
+    "description": "كوفي بإطلالة جبلية مذكور ضمن فئة الأطعمة والمشروبات في Visit Saudi، مناسب لقسم الكافيهات والإطلالات.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fog+Coffee+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "كوفي",
+      "إطلالة",
+      "قهوة",
+      "أبها"
+    ]
+  },
+  {
+    "id": "cafe_lascene",
+    "title": "لاسين كافيه",
+    "subtitle": "أبها",
+    "category": "cafes",
+    "image": "assets/cafes/lascene_cafe_1.jpg",
+    "description": "كافيه وارد ضمن توصيات Visit Saudi لعسير، يصلح كبطاقة محتوى في قسم الكافيهات.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lascene+Cafe+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "كوفي",
+      "أبها",
+      "جلسات",
+      "إطلالة"
+    ]
+  },
+  {
+    "id": "cafe_over_jar",
+    "title": "أوفر جار كافيه",
+    "subtitle": "أبها",
+    "category": "cafes",
+    "image": "assets/cafes/fog_coffee_1.jpg",
+    "description": "كافيه مذكور في قائمة Visit Saudi لأفضل الوجهات الغذائية في عسير.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Over+Jar+Caf%C3%A9+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "كوفي",
+      "قهوة",
+      "أصدقاء"
+    ]
+  },
+  {
+    "id": "cafe_mlle",
+    "title": "إم إل إل إي كافيه",
+    "subtitle": "أبها",
+    "category": "cafes",
+    "image": "assets/cafes/lascene_cafe_1.jpg",
+    "description": "مقهى وارد ضمن فئة Food & Beverages في Visit Saudi لعسير.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mlle+Caf%C3%A9+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "كوفي",
+      "قهوة",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "cafe_camel_step",
+    "title": "كاميل ستيب",
+    "subtitle": "خميس مشيط",
+    "category": "cafes",
+    "image": "assets/cafes/camel_step_1.jpg",
+    "description": "محمصة ومقهى قهوة مختصة؛ الصور المرفقة حقيقية لمحل Camel Step وتفيد قسم القهوة المختصة في التطبيق.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Camel+Step+Coffee+Roasters+%D8%AE%D9%85%D9%8A%D8%B3+%D9%85%D8%B4%D9%8A%D8%B7+Aseer+Saudi+Arabia",
+    "tags": [
+      "قهوة مختصة",
+      "كوفي",
+      "خميس مشيط"
+    ]
+  },
+  {
+    "id": "attr_rijal_almaa",
+    "title": "قرية رجال ألمع التراثية",
+    "subtitle": "رجال ألمع",
+    "category": "attractions",
+    "image": "assets/attractions/rijal_almaa_1.jpg",
+    "description": "قرية تاريخية بارزة تشتهر بمبانيها الحجرية متعددة الطوابق وتراثها المعماري والثقافي، وتوصي بها Visit Saudi ضمن موسم عسير.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Rijal+Almaa+Heritage+Village+%D8%B1%D8%AC%D8%A7%D9%84+%D8%A3%D9%84%D9%85%D8%B9+Aseer+Saudi+Arabia",
+    "tags": [
+      "تراث",
+      "قرية تاريخية",
+      "تصوير",
+      "ثقافة"
+    ]
+  },
+  {
+    "id": "attr_al_muftaha",
+    "title": "قرية المفتاحة الفنية",
+    "subtitle": "أبها",
+    "category": "attractions",
+    "image": "assets/attractions/al_muftaha_1.jpg",
+    "description": "وجهة ثقافية وفنية في أبها تضم طابعًا معماريًا محليًا ومساحات للفنون والتراث.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Muftaha+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "فن",
+      "ثقافة",
+      "أبها",
+      "تراث"
+    ]
+  },
+  {
+    "id": "attr_fatimah_museum",
+    "title": "متحف القط العسيري (متحف فاطمة)",
+    "subtitle": "أبها",
+    "category": "attractions",
+    "image": "assets/attractions/fatimah_museum_1.jpg",
+    "description": "متحف يبرز فن القط العسيري المسجل كعنصر تراثي بصري مميز في المنطقة، ومذكور ضمن Visit Saudi.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al-Qatt+Al-Aseeri+Museum+%28Fatimah+Museum%29+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "متحف",
+      "قط عسيري",
+      "تراث",
+      "فن"
+    ]
+  },
+  {
+    "id": "attr_al_dabab",
+    "title": "ممشى الضباب",
+    "subtitle": "أبها",
+    "category": "attractions",
+    "image": "assets/attractions/al_dabab_walkway_1.webp",
+    "description": "ممشى وإطلالة حضرية شهيرة في أبها، مناسب للعائلات والتصوير ومشاهدة الضباب والمناظر الجبلية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Dabab+Walkway+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "ممشى",
+      "إطلالة",
+      "تصوير",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "attr_al_habala",
+    "title": "منتزه الحبلة",
+    "subtitle": "الحبلة",
+    "category": "attractions",
+    "image": "assets/attractions/discover_aseer_attraction_01.webp",
+    "description": "منتزه طبيعي بارز على حواف جبلية، مذكور ضمن Visit Saudi كوجهة طبيعة في عسير.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Habala+Park+%D8%A7%D9%84%D8%AD%D8%A8%D9%84%D8%A9+Aseer+Saudi+Arabia",
+    "tags": [
+      "طبيعة",
+      "منتزه",
+      "جبال",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "attr_al_basta",
+    "title": "حي البسطة",
+    "subtitle": "أبها",
+    "category": "attractions",
+    "image": "assets/attractions/discover_aseer_attraction_02.webp",
+    "description": "حي تاريخي وثقافي في أبها مذكور ضمن Visit Saudi، مناسب لقسم التراث والتجول الحضري.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Basta+District+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "تراث",
+      "تجول",
+      "أبها",
+      "تصوير"
+    ]
+  },
+  {
+    "id": "attr_al_yanfa",
+    "title": "قرية آل ينفع التراثية",
+    "subtitle": "أحد رفيدة",
+    "category": "attractions",
+    "image": "assets/attractions/discover_aseer_attraction_03.webp",
+    "description": "قرية تراثية وردت ضمن Visit Saudi، يمكن عرضها ضمن الأماكن التاريخية المناسبة للعائلات.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Yanfa+Heritage+Village+%D8%A3%D8%AD%D8%AF+%D8%B1%D9%81%D9%8A%D8%AF%D8%A9+Aseer+Saudi+Arabia",
+    "tags": [
+      "تراث",
+      "قرية",
+      "تاريخ",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "attr_jerash",
+    "title": "مركز زوار موقع جرش الأثري",
+    "subtitle": "أحد رفيدة",
+    "category": "attractions",
+    "image": "assets/attractions/discover_aseer_attraction_04.webp",
+    "description": "موقع أثري ومركز زوار مذكور في Visit Saudi، مناسب لإضافة مسار ثقافي وتعليمي في التطبيق.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Visitor+Center+Jorash+Archaeological+Site+%D8%A3%D8%AD%D8%AF+%D8%B1%D9%81%D9%8A%D8%AF%D8%A9+Aseer+Saudi+Arabia",
+    "tags": [
+      "آثار",
+      "تاريخ",
+      "مركز زوار"
+    ]
+  },
+  {
+    "id": "hike_ridge_walk",
+    "title": "ذا ريدج ووك من هوساك",
+    "subtitle": "تنومة",
+    "category": "hiking",
+    "image": "assets/hiking/ridge_walk_1.jpg",
+    "description": "مسار مشي جبلي عائلي قصير بالقرب من مركز هوساك في تنومة، مذكور في Discover Aseer وVisit Saudi.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Ridge+Walk+by+Husaak+Adventures+%D8%AA%D9%86%D9%88%D9%85%D8%A9+Aseer+Saudi+Arabia",
+    "tags": [
+      "هايكنق",
+      "تنومة",
+      "جبال",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "hike_sawda",
+    "title": "مسار جبال السودة",
+    "subtitle": "السودة",
+    "category": "hiking",
+    "image": "assets/activities/discover_aseer_experience_38.webp",
+    "description": "تجربة هايكنق في مرتفعات السودة ضمن عروض Abha Trips على Discover Aseer، مناسبة للمغامرين ومحبي الإطلالات.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sawda+Mountains+Hiking+Trail+%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A9+Aseer+Saudi+Arabia",
+    "tags": [
+      "هايكنق",
+      "السودة",
+      "مغامرة",
+      "طبيعة"
+    ]
+  },
+  {
+    "id": "hike_abseiling",
+    "title": "نزول جبلي ومشي",
+    "subtitle": "عسير",
+    "category": "hiking",
+    "image": "assets/activities/discover_aseer_experience_28.jpg",
+    "description": "تجربة تجمع مشيًا قصيرًا ومعاينة نقوش تاريخية ونزولًا بالحبال، مقدمة من Husaak على Discover Aseer.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Abseiling+and+Hike+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "هايكنق",
+      "نزول بالحبال",
+      "مغامرة"
+    ]
+  },
+  {
+    "id": "act_areeka",
+    "title": "تجربة إعداد العريكة العسيرية",
+    "subtitle": "عسير",
+    "category": "activities",
+    "image": "assets/activities/discover_aseer_experience_06.webp",
+    "description": "تجربة طبخ حية لتعلم إعداد العريكة العسيرية الأصيلة مع مختص بالمطبخ الجنوبي.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Experience+preparing+Asiri+Areeka+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "تجربة",
+      "طبخ",
+      "مطبخ عسيري",
+      "ثقافة"
+    ]
+  },
+  {
+    "id": "act_honey",
+    "title": "اكتشاف أنواع العسل العسيري",
+    "subtitle": "رجال ألمع",
+    "category": "activities",
+    "image": "assets/farms/honey_cottage_1.jpg",
+    "description": "جولة للتعرف على أنواع العسل العسيري في كوخ العسل برجال ألمع مع مرشد سياحي.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Discover+the+varieties+of+Asiri+honey+%D8%B1%D8%AC%D8%A7%D9%84+%D8%A3%D9%84%D9%85%D8%B9+Aseer+Saudi+Arabia",
+    "tags": [
+      "عسل",
+      "جولة",
+      "مزارع",
+      "رجال ألمع"
+    ]
+  },
+  {
+    "id": "act_coffee_farms",
+    "title": "زيارة مزارع البن العسيري",
+    "subtitle": "رجال ألمع",
+    "category": "activities",
+    "image": "assets/activities/discover_aseer_experience_23.jpg",
+    "description": "تجربة للتعرف على مزارع البن في رجال ألمع وآليات الحصاد والمعالجة في بيئة محلية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Experience+visiting+the+Asiri+coffee+farms+in+Rijal+Almaa+%D8%B1%D8%AC%D8%A7%D9%84+%D8%A3%D9%84%D9%85%D8%B9+Aseer+Saudi+Arabia",
+    "tags": [
+      "بن",
+      "مزارع",
+      "رجال ألمع",
+      "جولة"
+    ]
+  },
+  {
+    "id": "act_ancient_rijal",
+    "title": "زيارة قرية رجال ألمع القديمة",
+    "subtitle": "رجال ألمع",
+    "category": "activities",
+    "image": "assets/attractions/rijal_almaa_1.jpg",
+    "description": "جولة تراثية لاكتشاف قرية تاريخية يزيد عمرها على 900 عام ضمن تجارب Discover Aseer.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Visit+Ancient+Village+of+Rijal+Almaa+%D8%B1%D8%AC%D8%A7%D9%84+%D8%A3%D9%84%D9%85%D8%B9+Aseer+Saudi+Arabia",
+    "tags": [
+      "جولة",
+      "تراث",
+      "قرية تاريخية"
+    ]
+  },
+  {
+    "id": "act_cycling",
+    "title": "جولات الدراجات",
+    "subtitle": "عسير",
+    "category": "activities",
+    "image": "assets/activities/discover_aseer_experience_40.webp",
+    "description": "جولة دراجات في مسارات ريفية وطبيعية مقدمة ضمن تجارب Discover Aseer.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cycling+Tours+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "دراجات",
+      "نشاط خارجي",
+      "طبيعة"
+    ]
+  },
+  {
+    "id": "act_camping",
+    "title": "التخييم",
+    "subtitle": "عسير",
+    "category": "activities",
+    "image": "assets/activities/discover_aseer_experience_41.webp",
+    "description": "تجربة تخييم في الطبيعة ضمن عروض Tmashi على Discover Aseer، مناسبة للمجموعات ومحبي الأجواء الخارجية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Camping+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "تخييم",
+      "طبيعة",
+      "مجموعة"
+    ]
+  },
+  {
+    "id": "farm_liwan",
+    "title": "مزرعة الليوان",
+    "subtitle": "عسير",
+    "category": "farms",
+    "image": "assets/farms/liwan_farm_1.jpg",
+    "description": "مزرعة ريفية توصي بها Visit Saudi ضمن موسم عسير للاستمتاع بالأجواء الريفية والأنشطة العائلية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Liwan+Farm+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "مزرعة",
+      "ريف",
+      "عائلات",
+      "تجربة"
+    ]
+  },
+  {
+    "id": "farm_wakan",
+    "title": "منتجع مزرعة واكان",
+    "subtitle": "قرية شرمة",
+    "category": "farms",
+    "image": "assets/farms/wakan_farm_resort_1.jpg",
+    "description": "ملاذ طبيعي هادئ في قرية شرمة، مذكور في Visit Saudi ضمن توصيات موسم عسير.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wakan+Farm+Resort+%D9%82%D8%B1%D9%8A%D8%A9+%D8%B4%D8%B1%D9%85%D8%A9+Aseer+Saudi+Arabia",
+    "tags": [
+      "منتجع",
+      "مزرعة",
+      "ريف",
+      "إقامة"
+    ]
+  },
+  {
+    "id": "farm_honey",
+    "title": "كوخ العسل",
+    "subtitle": "رجال ألمع",
+    "category": "farms",
+    "image": "assets/farms/honey_cottage_1.jpg",
+    "description": "وجهة مرتبطة بتجارب العسل في عسير ووردت ضمن Visit Saudi، مناسبة لقسم التجارب الريفية والغذائية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Honey+Cottage+%D8%B1%D8%AC%D8%A7%D9%84+%D8%A3%D9%84%D9%85%D8%B9+Aseer+Saudi+Arabia",
+    "tags": [
+      "عسل",
+      "مزرعة",
+      "تجربة",
+      "رجال ألمع"
+    ]
+  },
+  {
+    "id": "farm_abu_talal",
+    "title": "مزرعة أبو طلال",
+    "subtitle": "عسير",
+    "category": "farms",
+    "image": "assets/activities/discover_aseer_experience_31.jpg",
+    "description": "تجربة مزرعة منزلية تشمل جولة ووجبة عضوية وخبزًا عسيريًا ولبسًا تراثيًا ضمن Discover Aseer.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Welcome+To+Abu+Talal%27s+Farm+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "مزرعة",
+      "طبخ",
+      "تراث",
+      "ضيافة"
+    ]
+  },
+  {
+    "id": "event_aseer_season_2026",
+    "title": "موسم عسير 2026 / موسم الجاكرندا",
+    "subtitle": "أبها",
+    "category": "events",
+    "image": "assets/events/jacaranda_season_1.webp",
+    "description": "موسم رسمي من Visit Saudi يركز على تفتح الجاكرندا في عسير والوجهات المفتوحة والمناظر الربيعية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Aseer+Season+2026+%2F+Jacaranda+Season+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "موسم",
+      "جاكرندا",
+      "ربيع",
+      "أبها"
+    ]
+  },
+  {
+    "id": "event_foundation_day_2026",
+    "title": "يوم التأسيس 2026 في عسير",
+    "subtitle": "عسير",
+    "category": "events",
+    "image": "assets/events/discover_aseer_event_01.png",
+    "description": "فعالية موسمية تظهر في Discover Aseer بتاريخ 21 إلى 23 فبراير 2026 للاحتفاء بالتقاليد والمناظر الطبيعية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Founding+Day+2026+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "فعالية",
+      "تراث",
+      "يوم التأسيس"
+    ]
+  },
+  {
+    "id": "event_eid_2026",
+    "title": "فعاليات العيد 2026",
+    "subtitle": "عسير",
+    "category": "events",
+    "image": "assets/events/discover_aseer_event_03.jpg",
+    "description": "فعاليات العيد في عسير كما تظهر في صفحة Discover Aseer للفعاليات.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Eid+Events+2026+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "عيد",
+      "فعاليات",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "event_national_day",
+    "title": "اليوم الوطني 95",
+    "subtitle": "عسير",
+    "category": "events",
+    "image": "assets/events/discover_aseer_event_02.webp",
+    "description": "فعالية وطنية ضمن صفحة Discover Aseer للفعاليات، مناسبة لقسم الفعاليات الموسمية.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=National+Day+95+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "tags": [
+      "اليوم الوطني",
+      "فعالية",
+      "احتفال"
+    ]
+  },
+  {
+    "id": "hotel_abha_palace",
+    "title": "فندق قصر أبها",
+    "subtitle": "أبها",
+    "category": "hotels",
+    "image": "assets/hotels/abha_palace_1.jpg",
+    "description": "فندق بارز في أبها ومذكور ضمن Visit Saudi كخيار إقامة في عسير.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Abha+Palace+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "فندق",
+      "إقامة",
+      "أبها"
+    ]
+  },
+  {
+    "id": "hotel_braira",
+    "title": "فندق بريرا",
+    "subtitle": "أبها",
+    "category": "hotels",
+    "image": "assets/hotels/abha_palace_1.jpg",
+    "description": "خيار إقامة وارد ضمن Visit Saudi في فئة Accommodations، مناسب لإدراج خيارات السكن داخل التطبيق.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Braira+Hotel+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "فندق",
+      "إقامة",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "hotel_mercure",
+    "title": "فندق ميركيور",
+    "subtitle": "خميس مشيط",
+    "category": "hotels",
+    "image": "assets/hotels/abha_palace_2.jpg",
+    "description": "فندق مذكور ضمن Visit Saudi في عسير ويمكن إدراجه كخيار إقامة للزوار.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mercure+Hotel+%D8%AE%D9%85%D9%8A%D8%B3+%D9%85%D8%B4%D9%8A%D8%B7+Aseer+Saudi+Arabia",
+    "tags": [
+      "فندق",
+      "إقامة",
+      "خميس مشيط"
+    ]
+  },
+  {
+    "id": "shop_al_rashid",
+    "title": "الراشد مول أبها",
+    "subtitle": "أبها",
+    "category": "shopping",
+    "image": "assets/shopping/al_rashid_mall_1.jpg",
+    "description": "مجمع تجاري رئيسي في أبها، مذكور ضمن Visit Saudi في فئة التسوق.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Rashid+Mall+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "تسوق",
+      "مول",
+      "عائلات"
+    ]
+  },
+  {
+    "id": "shop_khamis_boulevard",
+    "title": "بوليفارد خميس مشيط",
+    "subtitle": "خميس مشيط",
+    "category": "shopping",
+    "image": "assets/shopping/khamis_avenue_1.jpg",
+    "description": "وجهة تسوق وترفيه مذكورة ضمن Visit Saudi، مناسبة لقسم المواقع الترفيهية والتسوق.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Khamis+Mushait+Boulevard+%D8%AE%D9%85%D9%8A%D8%B3+%D9%85%D8%B4%D9%8A%D8%B7+Aseer+Saudi+Arabia",
+    "tags": [
+      "تسوق",
+      "ترفيه",
+      "خميس مشيط"
+    ]
+  },
+  {
+    "id": "shop_tuesday_market",
+    "title": "سوق الثلاثاء",
+    "subtitle": "أبها",
+    "category": "shopping",
+    "image": "assets/shopping/souq_al_khamis_1.jpg",
+    "description": "سوق تقليدي في أبها مذكور في Visit Saudi، مناسب لشراء المنتجات المحلية والتصوير الثقافي.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Souq+Al+Thulatha+%28Tuesday+Market%29+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "tags": [
+      "سوق شعبي",
+      "تراث",
+      "منتجات محلية"
+    ]
+  }
+]

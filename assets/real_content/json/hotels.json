@@ -1,0 +1,99 @@
+[
+  {
+    "id": "hotel_abha_palace",
+    "name_ar": "فندق قصر أبها",
+    "name_en": "Abha Palace",
+    "category": "hotels",
+    "subcategory": "Accommodation",
+    "city": "أبها",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "فندق بارز في أبها ومذكور ضمن Visit Saudi كخيار إقامة في عسير.",
+    "tags": [
+      "فندق",
+      "إقامة",
+      "أبها"
+    ],
+    "image_assets": [
+      "assets/hotels/abha_palace_1.jpg",
+      "assets/hotels/abha_palace_2.jpg"
+    ],
+    "primary_image": "assets/hotels/abha_palace_1.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Abha+Palace+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": null,
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "hotel_braira",
+    "name_ar": "فندق بريرا",
+    "name_en": "Braira Hotel",
+    "category": "hotels",
+    "subcategory": "Accommodation",
+    "city": "أبها",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "خيار إقامة وارد ضمن Visit Saudi في فئة Accommodations، مناسب لإدراج خيارات السكن داخل التطبيق.",
+    "tags": [
+      "فندق",
+      "إقامة",
+      "عائلات"
+    ],
+    "image_assets": [
+      "assets/hotels/abha_palace_1.jpg"
+    ],
+    "primary_image": "assets/hotels/abha_palace_1.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Braira+Hotel+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": null,
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "hotel_mercure",
+    "name_ar": "فندق ميركيور",
+    "name_en": "Mercure Hotel",
+    "category": "hotels",
+    "subcategory": "Accommodation",
+    "city": "خميس مشيط",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "فندق مذكور ضمن Visit Saudi في عسير ويمكن إدراجه كخيار إقامة للزوار.",
+    "tags": [
+      "فندق",
+      "إقامة",
+      "خميس مشيط"
+    ],
+    "image_assets": [
+      "assets/hotels/abha_palace_2.jpg"
+    ],
+    "primary_image": "assets/hotels/abha_palace_2.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mercure+Hotel+%D8%AE%D9%85%D9%8A%D8%B3+%D9%85%D8%B4%D9%8A%D8%B7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": null,
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  }
+]

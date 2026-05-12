@@ -1,0 +1,30 @@
+# خدمة Web واحدة: بناء Flutter Web + نسخه إلى backend/web + تشغيل Flask (Gunicorn)
+# RENDER_EXTERNAL_URL يُحقن تلقائياً من Render وقت البناء لربط الـ API بنفس الرابط.
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: asir-smart-experience
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: |
+      set -e
+      export FLUTTER_ROOT="${FLUTTER_ROOT:-$HOME/flutter-sdk}"
+      if [ ! -x "$FLUTTER_ROOT/bin/flutter" ]; then
+        rm -rf "$FLUTTER_ROOT"
+        git clone https://github.com/flutter/flutter.git -b stable --depth 1 "$FLUTTER_ROOT"
+      fi
+      export PATH="$FLUTTER_ROOT/bin:$PATH"
+      flutter config --no-analytics
+      flutter precache --web
+      flutter pub get
+      API_URL="${RENDER_EXTERNAL_URL:-http://127.0.0.1:5000}"
+      flutter build web --release --base-href / --pwa-strategy=none --dart-define=API_BASE_URL="${API_URL}"
+      rm -rf backend/web
+      mkdir -p backend/web
+      cp -R build/web/. backend/web/
+      python -m pip install --upgrade pip
+      python -m pip install -r backend/requirements.txt
+    startCommand: bash backend/start.sh
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
