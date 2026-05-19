@@ -1,0 +1,99 @@
+[
+  {
+    "id": "shop_al_rashid",
+    "name_ar": "الراشد مول أبها",
+    "name_en": "Al Rashid Mall",
+    "category": "shopping",
+    "subcategory": "Shopping",
+    "city": "أبها",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "مجمع تجاري رئيسي في أبها، مذكور ضمن Visit Saudi في فئة التسوق.",
+    "tags": [
+      "تسوق",
+      "مول",
+      "عائلات"
+    ],
+    "image_assets": [
+      "assets/shopping/al_rashid_mall_1.jpg",
+      "assets/shopping/al_rashid_mall_2.jpg"
+    ],
+    "primary_image": "assets/shopping/al_rashid_mall_1.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Al+Rashid+Mall+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": null,
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "shop_khamis_boulevard",
+    "name_ar": "بوليفارد خميس مشيط",
+    "name_en": "Khamis Mushait Boulevard",
+    "category": "shopping",
+    "subcategory": "Shopping",
+    "city": "خميس مشيط",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "وجهة تسوق وترفيه مذكورة ضمن Visit Saudi، مناسبة لقسم المواقع الترفيهية والتسوق.",
+    "tags": [
+      "تسوق",
+      "ترفيه",
+      "خميس مشيط"
+    ],
+    "image_assets": [
+      "assets/shopping/khamis_avenue_1.jpg"
+    ],
+    "primary_image": "assets/shopping/khamis_avenue_1.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Khamis+Mushait+Boulevard+%D8%AE%D9%85%D9%8A%D8%B3+%D9%85%D8%B4%D9%8A%D8%B7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": null,
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "shop_tuesday_market",
+    "name_ar": "سوق الثلاثاء",
+    "name_en": "Souq Al Thulatha (Tuesday Market)",
+    "category": "shopping",
+    "subcategory": "Traditional Market",
+    "city": "أبها",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "سوق تقليدي في أبها مذكور في Visit Saudi، مناسب لشراء المنتجات المحلية والتصوير الثقافي.",
+    "tags": [
+      "سوق شعبي",
+      "تراث",
+      "منتجات محلية"
+    ],
+    "image_assets": [
+      "assets/shopping/souq_al_khamis_1.jpg"
+    ],
+    "primary_image": "assets/shopping/souq_al_khamis_1.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Souq+Al+Thulatha+%28Tuesday+Market%29+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": null,
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  }
+]

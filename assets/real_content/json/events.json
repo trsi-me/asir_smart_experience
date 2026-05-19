@@ -1,0 +1,133 @@
+[
+  {
+    "id": "event_aseer_season_2026",
+    "name_ar": "موسم عسير 2026 / موسم الجاكرندا",
+    "name_en": "Aseer Season 2026 / Jacaranda Season",
+    "category": "events",
+    "subcategory": "Season",
+    "city": "أبها",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "موسم رسمي من Visit Saudi يركز على تفتح الجاكرندا في عسير والوجهات المفتوحة والمناظر الربيعية.",
+    "tags": [
+      "موسم",
+      "جاكرندا",
+      "ربيع",
+      "أبها"
+    ],
+    "image_assets": [
+      "assets/events/jacaranda_season_1.webp",
+      "assets/events/jacaranda_season_2.jpg",
+      "assets/events/jacaranda_season_3.jpg"
+    ],
+    "primary_image": "assets/events/jacaranda_season_1.webp",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Aseer+Season+2026+%2F+Jacaranda+Season+%D8%A3%D8%A8%D9%87%D8%A7+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": "28 Apr 2026 - 31 May 2026",
+    "data_source_urls": [
+      "https://www.visitsaudi.com/en/seasons/aseer-season"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "event_foundation_day_2026",
+    "name_ar": "يوم التأسيس 2026 في عسير",
+    "name_en": "Founding Day 2026",
+    "category": "events",
+    "subcategory": "National event",
+    "city": "عسير",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "فعالية موسمية تظهر في Discover Aseer بتاريخ 21 إلى 23 فبراير 2026 للاحتفاء بالتقاليد والمناظر الطبيعية.",
+    "tags": [
+      "فعالية",
+      "تراث",
+      "يوم التأسيس"
+    ],
+    "image_assets": [
+      "assets/events/discover_aseer_event_01.png"
+    ],
+    "primary_image": "assets/events/discover_aseer_event_01.png",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Founding+Day+2026+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": "21 Feb 2026 - 23 Feb 2026",
+    "data_source_urls": [
+      "https://discoveraseer.com/en/events"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "event_eid_2026",
+    "name_ar": "فعاليات العيد 2026",
+    "name_en": "Eid Events 2026",
+    "category": "events",
+    "subcategory": "Festival",
+    "city": "عسير",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "فعاليات العيد في عسير كما تظهر في صفحة Discover Aseer للفعاليات.",
+    "tags": [
+      "عيد",
+      "فعاليات",
+      "عائلات"
+    ],
+    "image_assets": [
+      "assets/events/discover_aseer_event_03.jpg"
+    ],
+    "primary_image": "assets/events/discover_aseer_event_03.jpg",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Eid+Events+2026+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": "20 Mar 2026 - 23 Mar 2026",
+    "data_source_urls": [
+      "https://discoveraseer.com/en/events"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  },
+  {
+    "id": "event_national_day",
+    "name_ar": "اليوم الوطني 95",
+    "name_en": "National Day 95",
+    "category": "events",
+    "subcategory": "National event",
+    "city": "عسير",
+    "region": "منطقة عسير",
+    "country": "المملكة العربية السعودية",
+    "short_description_ar": "فعالية وطنية ضمن صفحة Discover Aseer للفعاليات، مناسبة لقسم الفعاليات الموسمية.",
+    "tags": [
+      "اليوم الوطني",
+      "فعالية",
+      "احتفال"
+    ],
+    "image_assets": [
+      "assets/events/discover_aseer_event_02.webp"
+    ],
+    "primary_image": "assets/events/discover_aseer_event_02.webp",
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=National+Day+95+%D8%B9%D8%B3%D9%8A%D8%B1+Aseer+Saudi+Arabia",
+    "coordinates": null,
+    "rating": null,
+    "opening_hours": null,
+    "phone": null,
+    "official_or_social_url": null,
+    "price_info": "18 Sep - 24 Sep",
+    "data_source_urls": [
+      "https://discoveraseer.com/en/events"
+    ],
+    "source_note_ar": "تم إدراج العنصر لأنه مذكور في مصادر سياحية رسمية أو صفحة Discover Aseer/Visit Saudi. الحقول غير المتاحة تُركت بقيمة null بدل اختلاق بيانات.",
+    "last_verified_date": "2026-05-11"
+  }
+]

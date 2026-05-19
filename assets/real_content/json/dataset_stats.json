@@ -1,0 +1,76 @@
+{
+  "total_items": 41,
+  "categories": [
+    {
+      "id": "restaurants",
+      "name_ar": "مطاعم",
+      "name_en": "Restaurants",
+      "count": 5,
+      "icon_suggestion": "restaurants"
+    },
+    {
+      "id": "cafes",
+      "name_ar": "كوفيهات",
+      "name_en": "Cafes",
+      "count": 5,
+      "icon_suggestion": "cafes"
+    },
+    {
+      "id": "hiking",
+      "name_ar": "هايكنق",
+      "name_en": "Hiking",
+      "count": 3,
+      "icon_suggestion": "hiking"
+    },
+    {
+      "id": "events",
+      "name_ar": "فعاليات",
+      "name_en": "Events",
+      "count": 4,
+      "icon_suggestion": "events"
+    },
+    {
+      "id": "attractions",
+      "name_ar": "أماكن سياحية",
+      "name_en": "Attractions",
+      "count": 8,
+      "icon_suggestion": "attractions"
+    },
+    {
+      "id": "activities",
+      "name_ar": "أنشطة وتجارب",
+      "name_en": "Activities",
+      "count": 6,
+      "icon_suggestion": "activities"
+    },
+    {
+      "id": "farms",
+      "name_ar": "مزارع وتجارب ريفية",
+      "name_en": "Farms",
+      "count": 4,
+      "icon_suggestion": "farms"
+    },
+    {
+      "id": "hotels",
+      "name_ar": "فنادق",
+      "name_en": "Hotels",
+      "count": 3,
+      "icon_suggestion": "hotels"
+    },
+    {
+      "id": "shopping",
+      "name_ar": "تسوق وأسواق",
+      "name_en": "Shopping",
+      "count": 3,
+      "icon_suggestion": "shopping"
+    }
+  ],
+  "images_total": 76,
+  "sources": {
+    "visit_saudi_aseer_season_2026": "https://www.visitsaudi.com/en/seasons/aseer-season",
+    "discover_aseer_experiences": "https://discoveraseer.com/en/experiences",
+    "discover_aseer_events": "https://discoveraseer.com/en/events",
+    "visit_saudi_aseer_guide_pdf": "https://www.visitsaudi.com/content/dam/wvs/download/aseer-guide-en.pdf",
+    "discover_aseer_official": "https://discoveraseer.com/en"
+  }
+}

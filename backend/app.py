@@ -1,0 +1,282 @@
+# -*- coding: utf-8 -*-
+"""
+Flask - عسير الذكية: API + خدمة ملفات Flutter Web من مجلد web/
+"""
+
+import os
+from typing import Optional
+from urllib.parse import unquote, urlparse
+
+import requests
+from flask import Flask, Response, jsonify, make_response, request, send_from_directory
+from flask_cors import CORS
+from recommendation_engine import SmartRecommendationEngine
+
+# نطاقات مسموح بجلب الصور منها فقط (أمان — يمنع استخدام الخادم كبروكسي مفتوح)
+_ALLOWED_IMAGE_HOSTS = frozenset({
+    'discoveraseer.com',
+    'www.discoveraseer.com',
+    'asir-coffee.org',
+    'www.asir-coffee.org',
+    'www.fatakat-a.com',
+    'fatakat-a.com',
+    'scth.scene7.com',
+    'makkahnewspaper.com',
+    'www.makkahnewspaper.com',
+    'files.manuscdn.com',
+    'www.visitsaudi.com',
+    'visitsaudi.com',
+    'static.hiamag.com',
+    'explore.rehlat.ae',
+    'rehlat.ae',
+})
+
+# مجلد ناتج: انسخ محتوى flutter build/web إلى backend/web قبل النشر
+WEB_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'web'))
+
+# Flutter يعيد توليد هذه الملفات بنفس الاسم؛ المتصفح يخزنها بقوة ما لم نمنع ذلك.
+_NO_STORE_WEB_BASENAMES = frozenset({
+    'index.html',
+    'main.dart.js',
+    'flutter_bootstrap.js',
+    'flutter.js',
+    'flutter_service_worker.js',
+    'manifest.json',
+    'version.json',
+})
+
+
+def _apply_web_cache_policy(response: Response, rel_from_web: str) -> Response:
+    """يمنع بقاء نسخ قديمة من الجذر بعد النشر (استدعاء ?v= على bootstrap لا يغيّر مسار main.dart.js)."""
+    base = os.path.basename(rel_from_web.replace('\\', '/'))
+    if base in _NO_STORE_WEB_BASENAMES:
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '0'
+    return response
+
+
+def _norm_join(*parts: str) -> str:
+    return os.path.normpath(os.path.join(*parts))
+
+
+def _is_under_web_root(candidate: str) -> bool:
+    """مقارنة آمنة على Windows (حالة الأحرف في المسار) لتفادي رفض مسارات assets صحيحة."""
+    root = os.path.normcase(os.path.abspath(WEB_DIR))
+    c = os.path.normcase(os.path.abspath(candidate))
+    return c == root or c.startswith(root + os.sep)
+
+app = Flask(__name__)
+CORS(app, origins=['*'])
+engine = SmartRecommendationEngine()
+
+
+def _image_fetch_headers(target_url: str) -> dict:
+    """رؤوس تشبه المتصفح لتقليل حظر جلب الصور من أصول ترفض User-Agent افتراضياً."""
+    parsed = urlparse(target_url)
+    host = (parsed.hostname or '').lower()
+    referer = f'{parsed.scheme}://{host}/'
+    if host in ('discoveraseer.com', 'www.discoveraseer.com'):
+        referer = 'https://discoveraseer.com/'
+    return {
+        'User-Agent': (
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+            '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        ),
+        'Accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+        'Accept-Language': 'ar,en-US;q=0.9,en;q=0.8',
+        'Referer': referer,
+    }
+
+
+@app.route('/api/health', methods=['GET'])
+def health():
+    """فحص حالة الخادم"""
+    return jsonify({'status': 'ok', 'message': 'عسير الذكية جاهز'})
+
+
+@app.route('/api/recommend/today', methods=['POST'])
+def recommend_today():
+    """
+    توصيات وش فيه اليوم - ذكية 100%
+    Body: {"weather": "مشمس", "preferences": ["عائلية", "طبيعة"]}
+    """
+    data = request.get_json() or {}
+    weather = data.get('weather', 'مشمس')
+    preferences = data.get('preferences', ['عائلية', 'طبيعة'])
+    results = engine.recommend_today(weather=weather, user_preferences=preferences)
+    return jsonify({'events': results})
+
+
+@app.route('/api/recommend/weather', methods=['POST'])
+def recommend_weather():
+    """
+    توصيات جوّك اليوم حسب الطقس
+    Body: {"weather": "ضباب"}
+    """
+    data = request.get_json() or {}
+    weather = data.get('weather', 'مشمس')
+    results = engine.recommend_by_weather(weather)
+    return jsonify(results)
+
+
+@app.route('/api/remote-image', methods=['GET'])
+def remote_image():
+    """
+    بروكسي صور للويب: المتصفح يطلب من نفس نطاق التطبيق فيتفادى CORS.
+    Query: u=<url مشفّر>
+    """
+    raw = request.args.get('u', '')
+    if not raw:
+        return jsonify({'error': 'missing u'}), 400
+    try:
+        url = unquote(raw)
+        parsed = urlparse(url)
+    except Exception:
+        return jsonify({'error': 'invalid url'}), 400
+
+    host = (parsed.hostname or '').lower()
+    if host not in _ALLOWED_IMAGE_HOSTS:
+        return jsonify({'error': 'host not allowed'}), 403
+    if parsed.scheme not in ('http', 'https'):
+        return jsonify({'error': 'invalid scheme'}), 400
+
+    try:
+        r = requests.get(
+            url,
+            timeout=30,
+            headers=_image_fetch_headers(url),
+            allow_redirects=True,
+        )
+        r.raise_for_status()
+        content = r.content
+        ct = r.headers.get('Content-Type', 'image/jpeg')
+        mime = ct.split(';')[0].strip() if ct else 'image/jpeg'
+        if not mime.startswith('image/'):
+            ul = url.lower()
+            if ul.endswith('.webp'):
+                mime = 'image/webp'
+            elif ul.endswith('.png'):
+                mime = 'image/png'
+            elif ul.endswith('.gif'):
+                mime = 'image/gif'
+            else:
+                mime = 'image/jpeg'
+        resp = Response(content, mimetype=mime)
+        resp.headers['Cache-Control'] = 'public, max-age=86400'
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
+    except requests.RequestException as e:
+        return jsonify({'error': str(e)}), 502
+
+
+@app.route('/api/recommend/booking', methods=['POST'])
+def recommend_booking():
+    """
+    الميزة الذكية: عند الحجز - اقتراح السكن والمواصلات تلقائياً
+    Body: {"experience": "مهرجان الضباب", "location": "أبها"}
+    """
+    data = request.get_json() or {}
+    experience = data.get('experience', '')
+    location = data.get('location', 'أبها')
+
+    accommodation = [
+        {'name': 'فنادق', 'count': '٢٥', 'near': location},
+        {'name': 'أكواخ', 'count': '١٥', 'near': location},
+        {'name': 'بيوت تراثية', 'count': '١٠', 'near': location},
+    ]
+    transport = [
+        {'name': 'تأجير سيارات'},
+        {'name': 'مرشدين سياحيين'},
+        {'name': 'مسارات جاهزة'},
+    ]
+    return jsonify({
+        'accommodation': accommodation,
+        'transport': transport,
+    })
+
+
+def _safe_file_path(relative_path: str):
+    """
+    يعيد مساراً مطلقًا داخل web/ أو None إذا كان المسار غير آمن.
+    للمسار الفارغ (الجذر) يعيد index.html.
+    """
+    if not relative_path:
+        return _norm_join(WEB_DIR, 'index.html')
+    rel = relative_path.replace('/', os.sep).lstrip('\\' + os.sep)
+    joined = _norm_join(WEB_DIR, rel)
+    if not _is_under_web_root(joined):
+        return None
+    return joined
+
+
+def _try_asset_manifest_alternates(joined: str) -> Optional[str]:
+    """بعض إصدارات Flutter تطلب AssetManifest.bin.json والمجلد يحتوي .bin أو .json فقط."""
+    base = os.path.basename(joined)
+    parent = os.path.dirname(joined)
+    if base != 'AssetManifest.bin.json':
+        return None
+    for name in ('AssetManifest.bin.json', 'AssetManifest.bin', 'AssetManifest.json'):
+        alt = _norm_join(parent, name)
+        if os.path.isfile(alt):
+            return alt
+    return None
+
+
+@app.route('/assets/<path:asset_path>')
+def serve_flutter_assets(asset_path):
+    """مسار صريح لملفات /assets/* (المانيفست والخطوط والصور) — يُسجَّل قبل catch-all."""
+    if not os.path.isdir(WEB_DIR) or not os.path.isfile(_norm_join(WEB_DIR, 'index.html')):
+        return (
+            '<html><body dir="rtl" style="font-family:sans-serif;padding:2rem">'
+            '<p>مجلد <code>backend/web</code> فارغ.</p>'
+            '<p>انسخ محتوى <code>flutter build/web</code> إلى <code>backend/web</code>.</p>'
+            '</body></html>',
+            503,
+        )
+    rel = ('assets/' + asset_path.replace('\\', '/')).replace('/', os.sep)
+    full = _safe_file_path(rel)
+    if full is None:
+        return ('Not Found', 404)
+    if not os.path.isfile(full):
+        alt = _try_asset_manifest_alternates(full)
+        if alt is not None and os.path.isfile(alt):
+            full = alt
+        else:
+            return ('Not Found', 404)
+    rel_send = os.path.relpath(full, WEB_DIR)
+    resp = make_response(send_from_directory(WEB_DIR, rel_send))
+    return _apply_web_cache_policy(resp, rel_send)
+
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_flutter(path):
+    """يخدم ملفات Flutter؛ أي مسار غير ملف حقيقي يرجع index.html (للتوجيه داخل التطبيق)."""
+    if not os.path.isdir(WEB_DIR) or not os.path.isfile(_norm_join(WEB_DIR, 'index.html')):
+        return (
+            '<html><body dir="rtl" style="font-family:sans-serif;padding:2rem">'
+            '<p>مجلد <code>backend/web</code> فارغ.</p>'
+            '<p>انسخ محتوى <code>build/web</code> من Flutter إلى <code>backend/web</code> ثم أعد التشغيل.</p>'
+            '</body></html>',
+            503,
+        )
+
+    full = _safe_file_path(path)
+    if path and full is not None:
+        target = full
+        if not os.path.isfile(target):
+            alt = _try_asset_manifest_alternates(target)
+            if alt is not None:
+                target = alt
+        if os.path.isfile(target):
+            rel = os.path.relpath(target, WEB_DIR)
+            resp = make_response(send_from_directory(WEB_DIR, rel))
+            return _apply_web_cache_policy(resp, rel)
+
+    resp = make_response(send_from_directory(WEB_DIR, 'index.html'))
+    return _apply_web_cache_policy(resp, 'index.html')
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
